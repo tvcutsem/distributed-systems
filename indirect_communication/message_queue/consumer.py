@@ -1,6 +1,8 @@
 import rabbitpy
 import sys
 import json
+import os
+
 from constants import *
 from time import sleep
 
@@ -11,7 +13,7 @@ def consumer(id):
   queue = rabbitpy.Queue(channel, QUEUE_NAME)
   queue.declare() # ensure queue exists on the server
 
-  print(f"consumer: connected to queue")
+  print(f"consumer {id}: connected to queue")
 
   # while there are messages in the queue, fetch them (using AMQP Basic.Get)
   while len(queue) > 0:
@@ -23,5 +25,8 @@ def consumer(id):
     sleep(1)
 
 if __name__ == "__main__":
-  me = str(sys.argv[1])
+  if len(sys.argv) > 1:
+     me = sys.argv[1]
+  else:
+     me = os.getpid()
   consumer(me)

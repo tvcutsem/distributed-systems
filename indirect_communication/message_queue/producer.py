@@ -17,7 +17,7 @@ def producer():
     message = rabbitpy.Message(channel, json.dumps(data)) # serialize data to string
     # Publish the message directly to the queue
     message.publish('', QUEUE_NAME)
-    print(f"producer: submitted order: '{data}'")
+    print(f"producer: submitted order '{data}'")
     time.sleep(5)
 
 if __name__ == "__main__":
