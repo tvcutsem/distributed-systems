@@ -8,12 +8,13 @@ flowchart LR
    server-->|reply|client
 ```
 
-The file `run.py` contains example code demonstrating a basic 'echo server'.
-An 'echo server' is a process that listens for a message and then simply replies the same message to the sender.
+The files `client.py` and `server.py` contain example code demonstrating a basic 'echo server'.
 
-In our example, the server listens on a TCP port for any message, reads the message and adds a '!' suffix (just so that we can easily tell the difference between the request and the reply message), and then sends the updated string back to the sender.
+An 'echo server' is a process that listens for any message and then simply replies to the sender with the same message.
 
-We use ZeroMQ's "request" and "reply" socket types to facilitate the communication.
+In our example, the server listens on a TCP port for any message to arrive, reads the message and adds a '!' suffix (just so that we can easily tell the difference between the request and the reply message), and then sends the updated message string back to the sender.
+
+We use ZeroMQ's "request" and "reply" socket types to facilitate this pattern of bidirectional communication.
 
 ## Running the code
 
