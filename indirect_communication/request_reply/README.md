@@ -13,9 +13,39 @@ An 'echo server' is a process that listens for a message and then simply replies
 
 In our example, the server listens on a TCP port for any message, reads the message and adds a '!' suffix (just so that we can easily tell the difference between the request and the reply message), and then sends the updated string back to the sender.
 
-The script `run.py` programmatically launches both client and server as sub-processes of a single parent process.
-
 We use ZeroMQ's "request" and "reply" socket types to facilitate the communication.
+
+## Running the code
+
+In one terminal (or shell), run:
+
+```
+% python3 server.py
+```
+
+In another terminal, run:
+
+```
+% python3 client.py
+```
+
+The output should be:
+
+```
+% python3 server.py
+received: b'Hello world'
+
+% python3 client.py
+Hello world!
+```
+
+Alternatively, the script `run.py` launches both the client and server process as sub-processes of a single parent process. You then see the client and server output interleaved in the same terminal:
+
+```
+% python3 run.py
+received: b'Hello world'
+Hello world!
+```
 
 ## ZeroMQ sockets versus standard TCP/IP sockets
 
