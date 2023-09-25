@@ -5,6 +5,9 @@ An example of message queuing using the RabbitMQ message broker.
 ```mermaid
 flowchart LR
    producer -->|publish|queue
+   subgraph broker
+     queue
+   end
    queue -->|deliver|consumer1 & consumer2
    consumer1 & consumer2 -->|subscribe|queue
 ```
