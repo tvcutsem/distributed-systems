@@ -18,8 +18,8 @@ def publisher():
     data = {'seq': i, 'id': 'sensor123', 'temp': random.randint(0,50)}
     message = rabbitpy.Message(channel, json.dumps(data)) # serialize data to string
     # Publish the message using a "routing key"
+    print(f"publisher: emitting event '{data}'")
     message.publish(exchange, 'temp.sensor123')
-    print(f"publisher: emit event: '{data}'")
     time.sleep(5)
 
 if __name__ == "__main__":
