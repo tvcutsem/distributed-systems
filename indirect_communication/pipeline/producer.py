@@ -13,14 +13,14 @@ def producer(port):
     
     time.sleep(2)
     for i in range(10):                     # generate 10 orders
-        order = json.dumps({
-            'src': port,
+      order = json.dumps({
+          'src': port,
 	        'order_id': i,
-            'total_value': random.randint(0,50)
+          'total_value': random.randint(0,50)
 	    })
-        print(f"producer: submitting order: '{order}'")
-        socket.send(order.encode())
-        time.sleep(5)
+      print(f"producer: submitting order '{order}'")
+      socket.send(order.encode())
+      time.sleep(5)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
