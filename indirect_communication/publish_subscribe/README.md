@@ -6,11 +6,11 @@ An example of Publish-subscribe using the RabbitMQ message broker.
 flowchart LR
    publisher -->|publish|exchange
    subgraph broker
-     exchange -->|bind|queue1
-     exchange -->|bind|queue2
+     exchange -->|enqueue|queue1
+     exchange -->|enqueue|queue2
    end
-   subscriber1 -->|subscribe|queue1
-   subscriber2 -->|subscribe|queue2
+   queue1 -->|dequeue|subscriber1
+   queue2 -->|dequeue|subscriber2
 ```
 
 > **_NOTE:_** This code assumes RabbitMQ is running as a separate process on your machine.
