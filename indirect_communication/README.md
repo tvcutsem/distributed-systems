@@ -24,8 +24,8 @@ If you are unfamiliar with processes or remote communication in Python, have a l
 
 Make sure you have a recent [Python3](https://www.python.org/downloads/) installed.
 
-  * Create a virtual environment, e.g. `python3 -m venv distsys`
-  * Activate it: `source distsys/bin/activate`
+  * Create a virtual environment, e.g. `python3 -m venv distsys_venv`
+  * Activate it: `source distsys_venv/bin/activate`
   * Install library dependencies: `pip install -r requirements.txt`
 
 The patterns [Request-reply](./request_reply), [Event notification](./event_notification) and [Pipeline](./pipeline) use a library called [ZeroMQ](https://zeromq.org/).
