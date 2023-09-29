@@ -1,0 +1,7 @@
+OK = 0
+ERR = 1
+WRITE = 2
+READ = 3
+TAKE = 4
+
+COMMANDS = ["OK", "ERR", "WRITE", "READ", "TAKE"]
