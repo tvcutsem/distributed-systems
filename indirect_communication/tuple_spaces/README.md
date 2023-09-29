@@ -100,7 +100,8 @@ and waiting for client requests.
 
 The file `client.py` implements a client interface that hides the details of
 the messaging protocol that tuple space client and server speak with each other.
-For example, the call `ts.take((1,2,None))` generates the following interaction:
+For example, the call `ts.take((1,2,None))` generates the following
+request-response interaction between client and server:
 
 ```mermaid
 flowchart LR
@@ -115,7 +116,7 @@ responding to a "TAKE" request because no tuple is available. In this case we
 store the identity of the sender and send a reply later.
 
 The tuple space is implemented as a basic list. Take and read operations have
-have *O(n)* time complexity, with *n* the total number of tuples in the tuple space.
+*O(n)* time complexity, with *n* the total number of tuples in the tuple space.
 Write operations have *O(m)* time complexity, with *m* the total number of readers
 or takers waiting for a matching tuple. We sacrifice efficiency for the sake
 of simplicity.
