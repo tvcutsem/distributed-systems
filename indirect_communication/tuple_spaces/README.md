@@ -104,8 +104,8 @@ For example, the call `ts.take((1,2,None))` generates the following interaction:
 
 ```mermaid
 flowchart LR
-   ts_client -->|[TAKE, (1,2,None), False]|ts_server
-   ts_server -->|[OK, (1,2,3)]|ts_client
+   ts_client -->|"[TAKE, (1,2,None), False]"|ts_server
+   ts_server -->|"[OK, (1,2,3)]"|ts_client
 ```
 
 The client uses a ZeroMQ `REQ` socket, connected to a server `ROUTER` socket.
