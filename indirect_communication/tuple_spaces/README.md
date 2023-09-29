@@ -63,6 +63,14 @@ A take command blocks until a matching tuple is available, removes it
 from the tuple space and returns it to the caller.
 The tuple space guarantees that at most one process will take the tuple.
 
+Often the taking process is only interested in the value of the wildcards,
+and you can rewrite the above to:
+
+```py
+_, _, x = ts.take((1,2,None))
+# x will be 3
+```
+
 To "read" (copy) a tuple from the tuple space:
 
 ```py
