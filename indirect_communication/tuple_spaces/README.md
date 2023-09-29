@@ -111,7 +111,3 @@ have *O(n)* time complexity, with *n* the total number of tuples in the tuple sp
 Write operations have *O(m)* time complexity, with *m* the total number of readers
 or takers waiting for a matching tuple. We sacrifice efficiency for the sake
 of simplicity.
-
-### Acknowledgements
-
-This tuple space API and some of the example code was inspired by [dRuby](https://www.druby.org/sidruby/the-druby-book.html) and its [Rinda](https://www.druby.org/sidruby/6-coordinating-processes-using-rinda.html) tuple spaces.

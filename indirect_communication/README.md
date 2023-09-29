@@ -8,13 +8,14 @@ See below for installation instructions.
 
 ## Communication Patterns
 
-The repository covers 5 of the 6 communication patterns discussed during the lecture on indirect communication:
+The repository covers the communication patterns discussed during the lecture on indirect communication:
 
   1. [Request-reply](./request_reply)
   2. [Event notification](./event_notification)
   3. [Pipeline](./pipeline)
   4. [Publish-subscribe](./publish_subscribe)
   5. [Message queuing](./message_queue)
+  5. [Tuple spaces](./tuple_spaces)
 
 Check the `README.md` in each subdirectory for details.
 
@@ -61,3 +62,5 @@ We use the [rabbitpy](https://rabbitpy.readthedocs.io/en/latest/index.html) Pyth
 The inspiration for these code examples comes from the [Distributed Systems](https://www.distributed-systems.net/index.php/books/ds4/) 4th edition book of Maarten van Steen and Andrew Tanenbaum. You can download a free copy of the book for educational purposes from their website.
 
 Some of the code in this repository is based on example code from the ZeroMQ and RabbitMQ documentation.
+
+The tuple space API and some of the example code in `tuple_spaces/` was inspired by [dRuby](https://www.druby.org/sidruby/the-druby-book.html) and its [Rinda](https://www.druby.org/sidruby/6-coordinating-processes-using-rinda.html) tuple spaces.
