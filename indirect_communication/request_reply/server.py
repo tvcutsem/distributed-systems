@@ -9,8 +9,8 @@ def server():
   while True:
     message = socket.recv()               # wait for incoming message
     if not "STOP" in str(message):        # if not to stop...
-      print(f"received: {message}")
       reply = str(message.decode())+'!'   # append "!" to message
+      print(f"echo: {reply}")
       socket.send(reply.encode())         # send it away (encoded)
     else:                         
       break                               # break out of loop and end
