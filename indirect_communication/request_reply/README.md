@@ -34,7 +34,7 @@ The output should be:
 
 ```
 % python3 server.py
-echo: b'hello'
+echo: 'hello!'
 
 % python3 client.py hello
 hello!
