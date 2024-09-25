@@ -27,25 +27,17 @@ In one terminal (or shell), run:
 In another terminal, run:
 
 ```
-% python3 client.py
+% python3 client.py hello
 ```
 
 The output should be:
 
 ```
 % python3 server.py
-received: b'Hello world'
+echo: b'hello'
 
-% python3 client.py
-Hello world!
-```
-
-Alternatively, the script `run.py` launches both the client and server process as sub-processes of a single parent process. You then see the client and server output interleaved in the same terminal:
-
-```
-% python3 run.py
-received: b'Hello world'
-Hello world!
+% python3 client.py hello
+hello!
 ```
 
 ## ZeroMQ sockets versus standard TCP/IP sockets
