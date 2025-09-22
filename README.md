@@ -4,7 +4,7 @@ This repository is part of the course on Distributed Systems in the Master of Co
 
 Lectures with supplementary code material:
 
-  * Lecture on [Indirect Communication](./indirect_communication) 
+  * Lecture on [Message-oriented Communication](./message_oriented_communication) 
 
 ## Disclaimer
 
