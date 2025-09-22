@@ -1,6 +1,6 @@
-# Lecture on Indirect Communication
+# Lecture on Message-oriented Communication
 
-This directory contains the code examples from the lecture on Indirect Communcation.
+This directory contains the code examples from the lecture on Message-oriented Communcation.
 
 The examples demonstrate various patterns of inter-process communication using Python and two modern middleware libraries: ZeroMQ and RabbitMQ.
 
@@ -8,7 +8,7 @@ See below for installation instructions.
 
 ## Communication Patterns
 
-The repository covers the communication patterns discussed during the lecture on indirect communication:
+The repository covers the communication patterns discussed during the lecture:
 
   1. [Request-reply](./request_reply)
   2. [Event notification](./event_notification)
@@ -29,9 +29,9 @@ Make sure you have a recent [Python3](https://www.python.org/downloads/) install
   * Activate it: `source distsys_venv/bin/activate`
   * Install library dependencies: `pip install -r requirements.txt`
 
-The patterns [Request-reply](./request_reply), [Event notification](./event_notification) and [Pipeline](./pipeline) use a library called [ZeroMQ](https://zeromq.org/).
+The patterns [Request-reply](./request_reply), [Event notification](./event_notification) and [Pipeline](./pipeline) are examples of "direct communication" and use a library called [ZeroMQ](https://zeromq.org/).
 
-The patterns [Publish-subscribe](./publish_subscribe) and [Message queuing](./message_queue) use a system called [RabbitMQ](https://www.rabbitmq.com/).
+The patterns [Publish-subscribe](./publish_subscribe) and [Message queuing](./message_queue) are examples of "indirect communication" and use a system called [RabbitMQ](https://www.rabbitmq.com/).
 
 See below for more information about these libraries.
 
